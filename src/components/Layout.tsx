@@ -5,14 +5,14 @@ import Sidebar from "./Sidebar";
 import Menu from "../assets/navMenu.svg";
 
 const Layout = () => {
-  const [showSidebar, setShowSidebar] = React.useState(false);
+  const [showSidebar, setShowSidebar] = React.useState(true);
 
   const handleSidebarTogle = React.useCallback(
     () => setShowSidebar((prev) => !prev),
     [showSidebar]
   );
   return (
-    <div className="relative min-h-screen md:flex">
+    <div className="relative h-screen w-screen bg-gray-50 overflow-hidden md:flex">
       <div className="bg-white flex justify-between md:hidden px-4">
         <LogoArea />
 
