@@ -1,7 +1,42 @@
-import "./App.css";
+import { Suspense } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import PageSpinner from "./components/PageSpinner";
+import { bottomRoutes, routes } from "./constants/routes";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {routes.map(({ path, component: Component }) => (
+              <Route
+                key={path}
+                path={path}
+                element={
+                  <Suspense fallback={<PageSpinner />}>
+                    <Component />
+                  </Suspense>
+                }
+              />
+            ))}
+            {bottomRoutes.map(({ path, component: Component }) => (
+              <Route
+                key={path}
+                path={path}
+                element={
+                  <Suspense fallback={<PageSpinner />}>
+                    <Component />
+                  </Suspense>
+                }
+              />
+            ))}
+          </Route>
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
