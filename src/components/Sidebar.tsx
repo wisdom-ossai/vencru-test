@@ -12,7 +12,7 @@ const Sidebar = ({ show }: { show: boolean }) => {
   const { pathname } = useLocation();
   return (
     <aside
-      className={`flex flex-col bg-white text-gray-700 w-64 space-y-6 px-4 py-7 absolute inset-y-0 left-0 transform ${
+      className={`flex flex-col bg-white text-gray-700 w-72 space-y-6 px-4 py-7 absolute inset-y-0 left-0 transform ${
         show ? "-translate-x-full" : ""
       } md:relative md:translate-x-0 transition duration-200 ease-in-out`}
     >

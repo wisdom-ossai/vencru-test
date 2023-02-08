@@ -12,7 +12,7 @@ const NewFeatures = () => {
         Check out the new dashboard view. Pages now load faster.{" "}
       </p>
       <img src={PlayImg} alt="" className="rounded" />
-      <button className="rounded-full absolute bottom-7 left-5 bg-transparent">
+      <button className="rounded-full absolute bottom-16 left-8 bg-transparent">
         <img src={Play} alt="" />
       </button>
       <div className="flex align-center mt-4 space-x-4">
