@@ -51,7 +51,7 @@ const BillingHistory = () => {
                           id="hs-table-checkbox-all"
                           type="checkbox"
                           onChange={(e) => handleSelectAll(e.target.checked)}
-                          className="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                          className="border-gray-200 rounded text-primary-600 focus:ring-primary-500"
                         />
                         <label
                           htmlFor="hs-table-checkbox-all"
@@ -86,7 +86,7 @@ const BillingHistory = () => {
                             type="checkbox"
                             checked={checkedState[idx]}
                             onChange={() => handleRowSelect(idx)}
-                            className="border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                            className="border-gray-200 rounded text-primary-600 focus:ring-primary-500"
                           />
                           <label
                             htmlFor={`item-${data.id}`}
