@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        success: {
+          50: "#ECFDF3",
+          700: "#027A48",
+        },
         primary: {
           50: "#F9F5FF",
           300: "#D6BBFB",

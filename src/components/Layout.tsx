@@ -12,7 +12,7 @@ const Layout = () => {
     [showSidebar]
   );
   return (
-    <div className="relative h-screen w-screen bg-gray-50 overflow-hidden md:flex">
+    <div className="relative h-screen w-screen bg-gray-50 md:overflow-hidden md:flex">
       <div className="bg-white flex justify-between md:hidden px-4">
         <LogoArea />
 
@@ -27,7 +27,7 @@ const Layout = () => {
       <Sidebar show={showSidebar} />
 
       {/* main content */}
-      <main className="flex-1 bg-gray-50 p-5 md:p-10">
+      <main className="flex-1 bg-gray-50 p-5 md:p-10 overflow-y-auto">
         <Outlet />
       </main>
     </div>

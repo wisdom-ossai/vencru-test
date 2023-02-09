@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 
 import { bottomRoutes, routes } from "../constants/routes";
-import { IRouteItem } from "../interfaces/routeInterface";
 import LogoArea from "./LogoArea";
 import NewFeatures from "./NewFeatures";
 import SearchInput from "./SearchInput";
 import avatar from "../assets/avatar.svg";
 import logoutIcon from "../assets/logout.svg";
+import { IRouteItem } from "../interfaces";
 
 const Sidebar = ({ show }: { show: boolean }) => {
   const { pathname } = useLocation();
@@ -14,10 +14,10 @@ const Sidebar = ({ show }: { show: boolean }) => {
     <aside
       className={`flex flex-col bg-white text-gray-700 w-72 space-y-6 px-4 py-7 absolute inset-y-0 left-0 transform ${
         show ? "-translate-x-full" : ""
-      } md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+      } md:relative md:translate-x-0 transition duration-200 ease-in-out overflow-y-auto`}
     >
       <LogoArea />
-      <SearchInput />
+      <SearchInput placeholder="Search" />
       <div className="flex-1">
         <nav>
           <>

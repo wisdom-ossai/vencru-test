@@ -1,14 +1,5 @@
-import { FC, useCallback, useMemo, useState } from "react";
-
-interface IListGroupItem {
-  id: number | string;
-  label: string | JSX.Element;
-}
-interface IListGroup {
-  data: IListGroupItem[];
-  onItemClick?: (item: IListGroupItem) => void;
-  defaultTabId?: number | string;
-}
+import { FC, useMemo, useState } from "react";
+import { IListGroup, IListGroupItem } from "../interfaces";
 
 const ListGroup: FC<IListGroup> = ({ data, onItemClick, defaultTabId }) => {
   const [activeTab, setActiveTab] = useState(defaultTabId);
