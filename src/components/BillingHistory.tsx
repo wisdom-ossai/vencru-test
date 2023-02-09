@@ -62,11 +62,13 @@ const BillingHistory = () => {
                       </div>
                     </th>
 
-                    {tableHead.map((val) => (
+                    {tableHead.map((val, idx) => (
                       <th
                         key={val}
                         scope="col"
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 bg-gray-50"
+                        className={`px-6 py-3 text-left text-xs font-medium text-gray-500 bg-gray-50 ${
+                          idx === 0 ? "w-[40%]" : ""
+                        }`}
                       >
                         {val}
                       </th>
