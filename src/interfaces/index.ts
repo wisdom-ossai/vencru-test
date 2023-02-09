@@ -5,6 +5,7 @@ export interface IRouteItem {
   path: string;
   component: LazyExoticComponent<FunctionComponent<any>>;
   icon: any;
+  notificationCount?: number;
 }
 
 export interface IListGroupItem {

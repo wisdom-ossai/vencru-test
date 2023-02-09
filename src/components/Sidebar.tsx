@@ -25,12 +25,19 @@ const Sidebar = ({ show }: { show: boolean }) => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center gap-2 py-2 px-3 rounded font-medium hover:bg-gray-100 hover:no-underline active:bg-gray-50 text-base ${
+                className={`flex items-center justify-between py-2 px-3 rounded font-medium hover:bg-gray-100 hover:no-underline active:bg-gray-50 text-base ${
                   pathname === item.path ? "bg-gray-50" : ""
                 }`}
               >
-                <img src={item.icon} alt={item.name} />
-                {item.name}
+                <div className="flex items-center gap-2 flex-1">
+                  <img src={item.icon} alt={item.name} />
+                  {item.name}
+                </div>
+                {item.notificationCount && item.notificationCount > 0 ? (
+                  <span className="inline-flex items-center justify-center gap-1.5 w-9 h-6 rounded-2xl text-sm font-medium bg-gray-100 text-gray-700">
+                    {item.notificationCount}
+                  </span>
+                ) : null}
               </Link>
             ))}
           </>
@@ -39,12 +46,19 @@ const Sidebar = ({ show }: { show: boolean }) => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center gap-2 py-2 px-3 rounded font-medium hover:bg-gray-100 hover:no-underline active:bg-gray-50 text-base ${
+                className={`flex items-center justify-between py-2 px-3 rounded font-medium hover:bg-gray-100 hover:no-underline active:bg-gray-50 text-base ${
                   pathname === item.path ? "bg-gray-50" : ""
                 } ${idx === 0 ? "mt-8" : ""}`}
               >
-                <img src={item.icon} alt={item.name} />
-                {item.name}
+                <div className="flex items-center gap-2 flex-1">
+                  <img src={item.icon} alt={item.name} />
+                  {item.name}
+                </div>
+                {item.notificationCount && item.notificationCount > 0 ? (
+                  <span className="inline-flex items-center justify-center gap-1.5 w-9 h-6 rounded-2xl text-sm font-medium bg-gray-100 text-gray-700">
+                    {item.notificationCount}
+                  </span>
+                ) : undefined}
               </Link>
             ))}
           </>

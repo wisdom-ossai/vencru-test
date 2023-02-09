@@ -25,36 +25,42 @@ export const routes = [
     component: lazy(() => import("../pages/Home")),
     name: "Home",
     icon: homeIcon,
+    notificationCount: 0,
   },
   {
     path: routePaths.DASHBOARD,
     component: lazy(() => import("../pages/Dashboard")),
     name: "Dashboard",
     icon: dashboardIcon,
+    notificationCount: 10,
   },
   {
     path: routePaths.PROJECTS,
     component: lazy(() => import("../pages/Projects")),
     name: "Projects",
     icon: projectsIcon,
+    notificationCount: 0,
   },
   {
     path: routePaths.TASKS,
     component: lazy(() => import("../pages/Tasks")),
     name: "Tasks",
     icon: tasksIcon,
+    notificationCount: 0,
   },
   {
     path: routePaths.REPORTING,
     component: lazy(() => import("../pages/Reporting")),
     name: "Reporting",
     icon: reportingIcon,
+    notificationCount: 0,
   },
   {
     path: routePaths.USERS,
     component: lazy(() => import("../pages/Users")),
     name: "Users",
     icon: usersIcon,
+    notificationCount: 0,
   },
 ];
 
